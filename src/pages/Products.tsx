@@ -103,15 +103,25 @@ const Products = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-primary-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
-              Our Products
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-dark-950 via-dark-900 to-dark-800 pt-20">
+        {/* Animated Background */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-neural-network opacity-30" />
+          <div className="absolute inset-0 bg-cyber-grid opacity-20" style={{ backgroundSize: '100px 100px' }} />
+          
+          {/* Floating orbs */}
+          <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-secondary-500/20 to-primary-500/20 rounded-full blur-3xl animate-float" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-cyber-blue/20 to-secondary-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <AnimatedSection>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
+              Our <span className="bg-gradient-to-r from-cyber-blue via-secondary-400 to-cyber-purple bg-clip-text text-transparent animate-gradient-x">Products</span>
             </h1>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
               Innovative platforms designed to solve real-world challenges across communities, 
               businesses, and healthcare sectors.
             </p>
@@ -120,16 +130,18 @@ const Products = () => {
       </section>
 
       {/* Products Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-b from-dark-900 to-dark-800 relative overflow-hidden">
+        <div className="absolute inset-0 bg-cyber-grid opacity-5" style={{ backgroundSize: '50px 50px' }} />
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Tabs defaultValue="communities" className="w-full">
             <AnimatedSection>
-              <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 mb-12 h-auto p-2">
+              <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 mb-12 h-auto p-2 bg-dark-800/40 backdrop-blur-sm border-dark-600">
                 {products.map((product) => (
                   <TabsTrigger
                     key={product.id}
                     value={product.id}
-                    className="flex flex-col items-center space-y-2 p-4 h-auto text-sm"
+                    className="flex flex-col items-center space-y-2 p-4 h-auto text-sm text-gray-300 data-[state=active]:text-white data-[state=active]:bg-gradient-to-r data-[state=active]:from-cyber-blue data-[state=active]:to-secondary-400"
                   >
                     <product.icon className="h-6 w-6" />
                     <span className="font-medium">{product.title}</span>
@@ -145,62 +157,64 @@ const Products = () => {
                     {/* Content */}
                     <div className="space-y-6">
                       <div className="flex items-center space-x-4">
-                        <div className="bg-primary-500 p-3 rounded-xl">
+                        <div className="bg-gradient-to-br from-cyber-blue to-secondary-400 p-3 rounded-xl shadow-glow">
                           <product.icon className="h-8 w-8 text-white" />
                         </div>
-                        <h2 className="text-3xl font-bold text-neutral-900">
+                        <h2 className="text-3xl font-bold text-white">
                           {product.title}
                         </h2>
                       </div>
                       
-                      <p className="text-lg text-neutral-600 leading-relaxed">
+                      <p className="text-lg text-gray-300 leading-relaxed">
                         {product.longDescription}
                       </p>
 
                       <div className="space-y-4">
-                        <h3 className="text-xl font-semibold text-neutral-900">
+                        <h3 className="text-xl font-semibold text-white">
                           Key Features
                         </h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                           {product.features.map((feature, featureIndex) => (
                             <div key={featureIndex} className="flex items-start space-x-2">
-                              <CheckCircle className="h-5 w-5 text-primary-500 mt-0.5 flex-shrink-0" />
-                              <span className="text-neutral-700">{feature}</span>
+                              <CheckCircle className="h-5 w-5 text-cyber-blue mt-0.5 flex-shrink-0" />
+                              <span className="text-gray-300">{feature}</span>
                             </div>
                           ))}
                         </div>
                       </div>
 
                       <div className="space-y-4">
-                        <h3 className="text-xl font-semibold text-neutral-900">
+                        <h3 className="text-xl font-semibold text-white">
                           Proven Results
                         </h3>
                         <ul className="space-y-2">
                           {product.benefits.map((benefit, benefitIndex) => (
                             <li key={benefitIndex} className="flex items-start space-x-2">
-                              <ArrowRight className="h-5 w-5 text-primary-500 mt-0.5 flex-shrink-0" />
-                              <span className="text-neutral-700">{benefit}</span>
+                              <ArrowRight className="h-5 w-5 text-cyber-blue mt-0.5 flex-shrink-0" />
+                              <span className="text-gray-300">{benefit}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
 
                       <div className="flex flex-col sm:flex-row gap-4">
-                        <Button size="lg" asChild>
-                          <Link to="/contact">
+                        <Link to="/contact">
+                          <Button size="lg" className="bg-gradient-to-r from-cyber-blue to-secondary-400 hover:from-cyber-blue/90 hover:to-secondary-400/90">
                             Request Demo
                             <ArrowRight className="ml-2 h-5 w-5" />
-                          </Link>
-                        </Button>
-                        <Button size="lg" variant="outline" asChild>
-                          <Link to="/contact">Learn More</Link>
-                        </Button>
+                          </Button>
+                        </Link>
+                        <Link to="/contact">
+                          <Button size="lg" variant="outline" className="border-cyber-blue text-cyber-blue hover:bg-cyber-blue hover:text-white">
+                            Learn More
+                          </Button>
+                        </Link>
                       </div>
                     </div>
 
                     {/* Image & Technologies */}
                     <div className="space-y-6">
-                      <div className="relative overflow-hidden rounded-2xl shadow-xl">
+                      <div className="relative overflow-hidden rounded-2xl shadow-neural">
                         <img
                           src={product.image}
                           alt={product.title}
@@ -209,16 +223,16 @@ const Products = () => {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                       </div>
 
-                      <Card>
+                      <Card className="bg-dark-800/40 backdrop-blur-sm border-dark-600">
                         <CardHeader>
-                          <CardTitle className="text-lg">Technologies Used</CardTitle>
+                          <CardTitle className="text-lg text-white">Technologies Used</CardTitle>
                         </CardHeader>
                         <CardContent>
                           <div className="flex flex-wrap gap-2">
                             {product.technologies.map((tech, techIndex) => (
                               <span
                                 key={techIndex}
-                                className="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-sm font-medium"
+                                className="px-3 py-1 bg-gradient-to-r from-cyber-blue/20 to-secondary-400/20 text-cyber-blue rounded-full text-sm font-medium border border-cyber-blue/30"
                               >
                                 {tech}
                               </span>
@@ -236,13 +250,15 @@ const Products = () => {
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-gradient-to-br from-neutral-50 to-primary-50/20">
+      <section className="py-20 bg-gradient-to-br from-dark-800 to-dark-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-neural-network opacity-20" />
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Success Stories
             </h2>
-            <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Real results from organizations using our platforms
             </p>
           </AnimatedSection>
@@ -266,15 +282,15 @@ const Products = () => {
               }
             ].map((stat, index) => (
               <AnimatedSection key={stat.platform} delay={index * 0.1}>
-                <Card className="text-center h-full">
+                <Card className="text-center h-full bg-dark-800/40 backdrop-blur-sm border-dark-600">
                   <CardContent className="p-6">
-                    <div className="text-4xl font-bold text-primary-500 mb-2">
+                    <div className="text-4xl font-bold bg-gradient-to-r from-cyber-blue to-secondary-400 bg-clip-text text-transparent mb-2">
                       {stat.metric}
                     </div>
-                    <p className="text-lg text-neutral-700 mb-2">
+                    <p className="text-lg text-gray-300 mb-2">
                       {stat.description}
                     </p>
-                    <p className="text-sm text-neutral-500">
+                    <p className="text-sm text-gray-400">
                       {stat.platform}
                     </p>
                   </CardContent>
@@ -286,26 +302,45 @@ const Products = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary-500 to-primary-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20 bg-gradient-to-br from-dark-950 via-secondary-900/20 to-primary-900/20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-neural-network opacity-30" />
+        <div className="absolute inset-0 bg-cyber-grid opacity-10" style={{ backgroundSize: '60px 60px' }} />
+        
+        {/* Floating elements */}
+        {[...Array(15)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-2 h-2 bg-cyber-blue/40 rounded-full animate-float"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${4 + Math.random() * 3}s`
+            }}
+          />
+        ))}
+        
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Organization?
             </h2>
-            <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Discover how our platforms can address your specific challenges and 
               drive meaningful results for your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" asChild>
-                <Link to="/contact">
+              <Link to="/contact">
+                <Button size="lg" variant="secondary" className="bg-gradient-to-r from-cyber-blue to-secondary-400 hover:from-cyber-blue/90 hover:to-secondary-400/90">
                   Schedule a Demo
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild className="border-white text-white hover:bg-white hover:text-primary-600">
-                <Link to="/about">Learn About Our Company</Link>
-              </Button>
+                </Button>
+              </Link>
+              <Link to="/about">
+                <Button size="lg" variant="outline" className="border-cyber-blue text-cyber-blue hover:bg-cyber-blue hover:text-white">
+                  Learn About Our Company
+                </Button>
+              </Link>
             </div>
           </AnimatedSection>
         </div>

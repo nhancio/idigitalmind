@@ -71,40 +71,52 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-primary-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
-              About iDigitalMind
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-dark-950 via-dark-900 to-dark-800 pt-20">
+        {/* Animated Background */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-neural-network opacity-30" />
+          <div className="absolute inset-0 bg-cyber-grid opacity-20" style={{ backgroundSize: '100px 100px' }} />
+          
+          {/* Floating orbs */}
+          <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-secondary-500/20 to-primary-500/20 rounded-full blur-3xl animate-float" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-cyber-blue/20 to-secondary-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <AnimatedSection>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
+              About <span className="bg-gradient-to-r from-cyber-blue via-secondary-400 to-cyber-purple bg-clip-text text-transparent animate-gradient-x">iDigitalMind</span>
             </h1>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
               Since 2012, we've been at the forefront of digital transformation, helping Australian 
               businesses navigate the complexities of the digital age with innovative solutions and 
               strategic expertise.
             </p>
             <div className="flex justify-center">
-              <Globe className="h-16 w-16 text-primary-500" />
+              <Globe className="h-16 w-16 text-cyber-blue" />
             </div>
           </AnimatedSection>
         </div>
       </section>
 
       {/* Mission Statement */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-b from-dark-900 to-dark-800 relative overflow-hidden">
+        <div className="absolute inset-0 bg-cyber-grid opacity-5" style={{ backgroundSize: '50px 50px' }} />
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
-              <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Our Mission
               </h2>
-              <p className="text-lg text-neutral-600 mb-6 leading-relaxed">
+              <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                 We exist to bridge the gap between traditional business practices and the digital future. 
                 Our mission is to empower organizations with the tools, strategies, and expertise they 
                 need to thrive in an increasingly connected world.
               </p>
-              <p className="text-lg text-neutral-600 leading-relaxed">
+              <p className="text-lg text-gray-300 leading-relaxed">
                 Through innovative technology solutions, strategic consulting, and unwavering commitment 
                 to our clients' success, we're building a more digitally empowered business landscape 
                 across Australia and beyond.
@@ -119,12 +131,12 @@ const About = () => {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-gradient-to-br from-primary-50 to-primary-100 p-6 rounded-2xl text-center"
+                    className="bg-gradient-to-br from-dark-700/60 to-dark-600/60 backdrop-blur-sm border border-dark-600 p-6 rounded-2xl text-center shadow-neural hover:shadow-glow transition-all duration-300"
                   >
-                    <div className="text-3xl font-bold text-primary-600 mb-2">
+                    <div className="text-3xl font-bold bg-gradient-to-r from-cyber-blue to-secondary-400 bg-clip-text text-transparent mb-2">
                       {achievement.number}
                     </div>
-                    <div className="text-sm text-neutral-600">{achievement.label}</div>
+                    <div className="text-sm text-gray-400">{achievement.label}</div>
                   </motion.div>
                 ))}
               </div>
@@ -134,13 +146,15 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 bg-neutral-50">
+      <section className="py-20 bg-gradient-to-br from-dark-800 to-dark-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-neural-network opacity-20" />
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Core Values
             </h2>
-            <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               The principles that guide everything we do
             </p>
           </AnimatedSection>
@@ -148,15 +162,15 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <AnimatedSection key={value.title} delay={index * 0.1}>
-                <Card className="h-full text-center group hover:shadow-xl transition-all duration-300">
+                <Card className="h-full text-center group hover:bg-dark-700/60 backdrop-blur-sm border-dark-600 bg-dark-800/40">
                   <CardHeader>
-                    <div className="mx-auto bg-primary-500 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <div className="mx-auto bg-gradient-to-br from-secondary-500 to-primary-500 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-glow group-hover:shadow-glow-lg">
                       <value.icon className="h-8 w-8 text-white" />
                     </div>
-                    <CardTitle className="text-xl">{value.title}</CardTitle>
+                    <CardTitle className="text-xl text-white">{value.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-neutral-600 leading-relaxed">
+                    <p className="text-gray-300 leading-relaxed">
                       {value.description}
                     </p>
                   </CardContent>
@@ -168,38 +182,40 @@ const About = () => {
       </section>
 
       {/* Timeline */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-b from-dark-900 to-dark-800 relative">
+        <div className="absolute inset-0 bg-cyber-grid opacity-5" style={{ backgroundSize: '80px 80px' }} />
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Journey
             </h2>
-            <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Over a decade of innovation and growth
             </p>
           </AnimatedSection>
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary-200 transform md:-translate-x-0.5" />
+            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-cyber-blue/30 transform md:-translate-x-0.5" />
 
             <div className="space-y-12">
               {timeline.map((item, index) => (
                 <AnimatedSection key={item.year} delay={index * 0.1}>
                   <div className={`flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                     <div className="flex-1 md:w-1/2">
-                      <div className={`bg-white p-6 rounded-2xl shadow-lg border-l-4 border-primary-500 ml-8 md:ml-0 ${index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'}`}>
+                      <div className={`bg-dark-700/60 backdrop-blur-sm p-6 rounded-2xl shadow-neural border-l-4 border-cyber-blue ml-8 md:ml-0 ${index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'}`}>
                         <div className="flex items-center mb-2">
-                          <div className="bg-primary-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                          <div className="bg-gradient-to-r from-cyber-blue to-secondary-400 text-white px-3 py-1 rounded-full text-sm font-semibold">
                             {item.year}
                           </div>
                         </div>
-                        <p className="text-neutral-700 leading-relaxed">{item.event}</p>
+                        <p className="text-gray-300 leading-relaxed">{item.event}</p>
                       </div>
                     </div>
                     
                     {/* Timeline dot */}
-                    <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-primary-500 rounded-full transform -translate-x-2 md:-translate-x-2 shadow-lg" />
+                    <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-cyber-blue rounded-full transform -translate-x-2 md:-translate-x-2 shadow-glow" />
                   </div>
                 </AnimatedSection>
               ))}
@@ -209,13 +225,15 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-gradient-to-br from-neutral-50 to-primary-50/20">
+      <section className="py-20 bg-gradient-to-br from-dark-800 to-dark-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-neural-network opacity-20" />
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Meet Our Leadership Team
             </h2>
-            <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Experienced professionals dedicated to your success
             </p>
           </AnimatedSection>
@@ -223,7 +241,7 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
               <AnimatedSection key={member.name} delay={index * 0.1}>
-                <Card className="h-full group hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <Card className="h-full group hover:bg-dark-700/60 transition-all duration-300 overflow-hidden backdrop-blur-sm border-dark-600 bg-dark-800/40">
                   <div className="relative">
                     <img
                       src={member.image}
@@ -233,11 +251,11 @@ const About = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold text-neutral-900 mb-1">
+                    <h3 className="text-xl font-semibold text-white mb-1">
                       {member.name}
                     </h3>
-                    <p className="text-primary-600 font-medium mb-3">{member.role}</p>
-                    <p className="text-neutral-600 text-sm leading-relaxed">{member.bio}</p>
+                    <p className="text-cyber-blue font-medium mb-3">{member.role}</p>
+                    <p className="text-gray-300 text-sm leading-relaxed">{member.bio}</p>
                   </CardContent>
                 </Card>
               </AnimatedSection>

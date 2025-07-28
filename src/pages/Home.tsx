@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle, Users, Award, Zap, Target, Sparkles } from 'lucide-react';
+import { ArrowRight, CheckCircle, Users, Award, Zap, Target, Sparkles, Mail, Phone, MapPin } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import AnimatedSection from '../components/common/AnimatedSection';
@@ -82,6 +82,72 @@ const Home = () => {
     { number: '95%', label: 'Client Satisfaction' }
   ];
 
+  const workProjects = [
+    {
+      title: 'Healthcare Platform',
+      description: 'Comprehensive patient management system with AI-powered diagnostics',
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop',
+      category: 'Healthcare',
+      technologies: ['React', 'Node.js', 'AI/ML', 'PostgreSQL']
+    },
+    {
+      title: 'E-commerce Solution',
+      description: 'Modern online retail platform with advanced analytics and personalization',
+      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
+      category: 'E-commerce',
+      technologies: ['Next.js', 'Stripe', 'MongoDB', 'Redis']
+    },
+    {
+      title: 'AI Chatbot Platform',
+      description: 'Intelligent customer service automation with natural language processing',
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop',
+      category: 'AI/ML',
+      technologies: ['Python', 'TensorFlow', 'NLP', 'AWS']
+    },
+    {
+      title: 'Mobile Banking App',
+      description: 'Secure financial management application with biometric authentication',
+      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop',
+      category: 'Fintech',
+      technologies: ['React Native', 'Firebase', 'Biometrics', 'Blockchain']
+    },
+    {
+      title: 'Smart City Dashboard',
+      description: 'Real-time urban analytics and IoT integration platform',
+      image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop',
+      category: 'IoT',
+      technologies: ['Vue.js', 'IoT', 'Real-time', 'Azure']
+    },
+    {
+      title: 'Educational Platform',
+      description: 'Interactive learning management system with adaptive content',
+      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop',
+      category: 'Education',
+      technologies: ['Angular', 'AI', 'Video Streaming', 'Analytics']
+    }
+  ];
+
+  const contactInfo = [
+    {
+      icon: Mail,
+      title: 'Email Us',
+      content: 'contact@idigitalmind.com.au',
+      description: 'Send us an email anytime'
+    },
+    {
+      icon: Phone,
+      title: 'Call Us',
+      content: '+61‑405014720',
+      description: 'Mon-Sat, 10am-7pm AEST'
+    },
+    {
+      icon: MapPin,
+      title: 'Visit Us',
+      content: 'Macquarie Park, NSW, 2113',
+      description: 'Australia'
+    }
+  ];
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -142,15 +208,17 @@ const Home = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button size="lg" asChild className="text-lg px-8 py-4">
-                <Link to="/services">
+              <Link to="/services">
+                <Button size="lg" className="text-lg px-8 py-4">
                   Our Services
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild className="text-lg px-8 py-4">
-                <Link to="/contact">Contact Us</Link>
-              </Button>
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button size="lg" variant="outline" className="text-lg px-8 py-4">
+                  Contact Us
+                </Button>
+              </Link>
             </div>
 
             {/* Stats */}
@@ -211,18 +279,83 @@ const Home = () => {
           </div>
 
           <AnimatedSection className="text-center mt-12" delay={0.4}>
-            <Button size="lg" asChild>
-              <Link to="/services">
+            <Link to="/services">
+              <Button size="lg">
                 View All Services
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
+              </Button>
+            </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Our Work Section */}
+      <section className="py-20 bg-gradient-to-br from-dark-800 to-dark-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-neural-network opacity-20" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Work
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Showcasing innovative solutions that drive real business impact
+            </p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {workProjects.map((project, index) => (
+              <AnimatedSection key={project.title} delay={index * 0.1}>
+                <Card className="group overflow-hidden bg-dark-800/40 backdrop-blur-sm border-dark-600 hover:bg-dark-700/60 transition-all duration-300">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute top-4 left-4">
+                      <span className="px-3 py-1 bg-gradient-to-r from-cyber-blue to-secondary-400 text-white text-xs font-medium rounded-full">
+                        {project.category}
+                      </span>
+                    </div>
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyber-blue transition-colors duration-300">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-300 text-sm mb-4">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="px-2 py-1 bg-gradient-to-r from-cyber-blue/20 to-secondary-400/20 text-cyber-blue text-xs rounded border border-cyber-blue/30"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          <AnimatedSection className="text-center mt-12" delay={0.6}>
+            <Link to="/products">
+              <Button size="lg" variant="outline" className="border-cyber-blue text-cyber-blue hover:bg-cyber-blue hover:text-white">
+                View All Projects
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </AnimatedSection>
         </div>
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-gradient-to-br from-dark-800 to-dark-900 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-dark-900 to-dark-800 relative overflow-hidden">
         {/* Animated background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-neural-network opacity-20" />
@@ -356,7 +489,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Contact Section */}
       <section className="py-20 bg-gradient-to-br from-dark-950 via-secondary-900/20 to-primary-900/20 relative overflow-hidden">
         <div className="absolute inset-0 bg-neural-network opacity-30" />
         <div className="absolute inset-0 bg-cyber-grid opacity-10" style={{ backgroundSize: '60px 60px' }} />
@@ -375,25 +508,53 @@ const Home = () => {
           />
         ))}
         
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <AnimatedSection>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Start Your Project?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-12">
               Let's discuss how we can help you navigate the digital landscape 
               and achieve your business goals.
             </p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {contactInfo.map((info, index) => (
+              <AnimatedSection key={info.title} delay={index * 0.1}>
+                <Card className="text-center h-full group hover:bg-dark-700/60 transition-all duration-300 backdrop-blur-sm border-dark-600 bg-dark-800/40">
+                  <CardContent className="p-6">
+                    <div className="bg-gradient-to-br from-cyber-blue to-secondary-400 p-3 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-glow">
+                      <info.icon className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="font-semibold text-white mb-2">
+                      {info.title}
+                    </h3>
+                    <p className="text-cyber-blue font-medium mb-1">
+                      {info.content}
+                    </p>
+                    <p className="text-sm text-gray-400">
+                      {info.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          <AnimatedSection className="text-center">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" asChild>
-                <Link to="/contact">
+              <Link to="/contact">
+                <Button size="lg" variant="secondary">
                   Get Started Today
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link to="/about">Learn More About Us</Link>
-              </Button>
+                </Button>
+              </Link>
+              <Link to="/about">
+                <Button size="lg" variant="outline" className="border-cyber-blue text-cyber-blue hover:bg-cyber-blue hover:text-white">
+                  Learn More About Us
+                </Button>
+              </Link>
             </div>
           </AnimatedSection>
         </div>
