@@ -7,16 +7,15 @@ const Footer = () => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
-    { name: 'Products', path: '/products' },
     { name: 'Contact', path: '/contact' },
   ];
 
   const services = [
-    'Digital Strategy',
-    'AI & Machine Learning',
-    'Web Development',
-    'Mobile Apps',
-    'Cloud Services',
+    'AI Marketing',
+    'AI Automation',
+    'AI Product Development',
+    'AI Upskilling',
+    'AI CoE',
   ];
 
   const socialLinks = [

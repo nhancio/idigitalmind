@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import { ArrowRight, CheckCircle, Users, Award, Zap, Target, Sparkles, Mail, Phone, MapPin } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
@@ -20,6 +21,7 @@ import {
 } from 'lucide-react';
 
 const Home = () => {
+  const [activeClientTab, setActiveClientTab] = useState('all');
   const services = [
     {
       title: 'Digital Strategy',
@@ -73,6 +75,32 @@ const Home = () => {
 
   const clientLogos = [
     'TechStart', 'Healthcare+', 'RetailHub', 'EduFlow', 'FinanceCore', 'CloudTech'
+  ];
+
+  const allClients = [
+    { name: 'TOTALABILITY AUSTRALIA', tagline: '' },
+    { name: 'ASELTECH', tagline: '' },
+    { name: 'SME BOOTH', tagline: 'Connect to Grow your Business' },
+    { name: 'MEDIMIND', tagline: 'making a difference, for life.' },
+    { name: 'telefony', tagline: '' },
+    { name: 'heart & beyond', tagline: '' },
+    { name: 'curiious', tagline: '' },
+    { name: 'STUDIO GL', tagline: '' },
+    { name: 'smithfield family medical practice', tagline: 'Caring for families for over 30 years' }
+  ];
+
+  const webDevClients = [
+    { name: 'TOTALABILITY AUSTRALIA', tagline: '' },
+    { name: 'ASELTECH', tagline: '' },
+    { name: 'telefony', tagline: '' },
+    { name: 'MEDIMIND', tagline: 'making a difference, for life.' }
+  ];
+
+  const appDevClients = [
+    { name: 'TOTALABILITY AUSTRALIA', tagline: '' },
+    { name: 'ASELTECH', tagline: '' },
+    { name: 'telefony', tagline: '' },
+    { name: 'MEDIMIND', tagline: 'making a difference, for life.' }
   ];
 
   const stats = [
@@ -344,9 +372,9 @@ const Home = () => {
           </div>
 
           <AnimatedSection className="text-center mt-12" delay={0.6}>
-            <Link to="/products">
+            <Link to="/services">
               <Button size="lg" variant="outline" className="border-cyber-blue text-cyber-blue hover:bg-cyber-blue hover:text-white">
-                View All Projects
+                View All Services
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
@@ -461,27 +489,71 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Client Logos */}
-      <section className="py-16 bg-dark-800 relative overflow-hidden">
+      {/* Clients Section */}
+      <section className="py-20 bg-dark-800 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-secondary-500/5 to-primary-500/5" />
+        <div className="absolute inset-0 bg-cyber-grid opacity-5" style={{ backgroundSize: '50px 50px' }} />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center mb-12">
-            <h3 className="text-2xl font-semibold text-white mb-8">
-              Trusted by Leading Organizations
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-              {clientLogos.map((logo, index) => (
+          <AnimatedSection className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our <span className="bg-gradient-to-r from-cyber-blue via-secondary-400 to-cyber-purple bg-clip-text text-transparent">Clients</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Trusted by leading organizations across Australia
+            </p>
+          </AnimatedSection>
+
+          {/* Client Tabs */}
+          <AnimatedSection className="mb-12">
+            <div className="flex justify-center mb-8">
+              <div className="bg-dark-700/40 backdrop-blur-sm border border-dark-600 rounded-xl p-1">
+                <div className="flex space-x-1">
+                  {[
+                    { id: 'all', label: 'Show All' },
+                    { id: 'web', label: 'Web Development' },
+                    { id: 'app', label: 'Mobile App Development' }
+                  ].map((tab) => (
+                    <button
+                      key={tab.id}
+                      onClick={() => setActiveClientTab(tab.id)}
+                      className={`px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
+                        activeClientTab === tab.id
+                          ? 'bg-gradient-to-r from-cyber-blue to-secondary-400 text-white shadow-glow'
+                          : 'text-gray-300 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      {tab.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
+
+          {/* Client Content */}
+          <AnimatedSection>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+              {(activeClientTab === 'all' ? allClients : 
+                activeClientTab === 'web' ? webDevClients : 
+                appDevClients).map((client, index) => (
                 <motion.div
-                  key={logo}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                  key={client.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-dark-700/40 backdrop-blur-sm border border-dark-600 p-6 rounded-xl shadow-neural hover:shadow-glow transition-all duration-300 flex items-center justify-center h-20 group hover:border-cyber-blue/30"
+                  className="bg-dark-700/40 backdrop-blur-sm border border-dark-600 p-6 rounded-xl shadow-neural hover:shadow-glow transition-all duration-300 group hover:border-cyber-blue/30"
                 >
-                  <span className="text-gray-300 group-hover:text-white font-semibold text-lg transition-colors duration-300">
-                    {logo}
-                  </span>
+                  <div className="text-center">
+                    <h4 className="text-white font-semibold text-lg mb-2 group-hover:text-cyber-blue transition-colors duration-300">
+                      {client.name}
+                    </h4>
+                    {client.tagline && (
+                      <p className="text-gray-400 text-sm italic">
+                        "{client.tagline}"
+                      </p>
+                    )}
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -546,7 +618,7 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
                 <Button size="lg" variant="secondary">
-                  Get Started Today
+                  Get in Touch Today
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>

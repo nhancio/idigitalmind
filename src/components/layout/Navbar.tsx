@@ -13,7 +13,6 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
-    { name: 'Products', path: '/products' },
     { name: 'Our Approach', path: '/approach' },
     { name: 'Contact', path: '/contact' },
   ];
@@ -25,6 +24,14 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Set consistent background for pages without hero sections
+  useEffect(() => {
+    const pagesWithoutHero = ['/about', '/services', '/approach', '/contact'];
+    if (pagesWithoutHero.includes(location.pathname)) {
+      setIsScrolled(true);
+    }
+  }, [location.pathname]);
 
   return (
     <motion.nav
@@ -71,8 +78,8 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button asChild>
-              <Link to="/contact">Get Started</Link>
+            <Button asChild className="bg-gradient-to-r from-cyber-blue to-secondary-400 hover:from-cyber-blue/90 hover:to-secondary-400/90">
+              <Link to="/contact">Enquire Now</Link>
             </Button>
           </div>
 
@@ -114,9 +121,9 @@ const Navbar = () => {
                   </Link>
                 ))}
                 <div className="pt-4">
-                  <Button asChild className="w-full">
+                  <Button asChild className="w-full bg-gradient-to-r from-cyber-blue to-secondary-400 hover:from-cyber-blue/90 hover:to-secondary-400/90">
                     <Link to="/contact" onClick={() => setIsOpen(false)}>
-                      Get Started
+                      Enquire Now
                     </Link>
                   </Button>
                 </div>

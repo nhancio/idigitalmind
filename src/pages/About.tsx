@@ -31,16 +31,16 @@ const About = () => {
     { year: '2012', event: 'Founded iDigitalMind with a vision to transform businesses through digital innovation' },
     { year: '2015', event: 'Expanded into AI and machine learning solutions, becoming early adopters in the Australian market' },
     { year: '2018', event: 'Launched our healthcare platform, revolutionizing patient management systems' },
-    { year: '2020', event: 'Pivoted to support businesses during digital transformation accelerated by global changes' },
+    { year: '2020', event: 'Pivoted to support businesses during AI transformation accelerated by global changes' },
     { year: '2022', event: 'Introduced advanced AI chatbots and NLP solutions for enterprise clients' },
-    { year: '2024', event: 'Continuing to lead digital transformation across industries with innovative solutions' },
+    { year: '2024', event: 'Continuing to lead AI transformation across industries with innovative solutions' },
   ];
 
   const team = [
     {
       name: 'Dr. Sarah Chen',
       role: 'Founder & CEO',
-      bio: 'PhD in Computer Science with 15+ years experience in digital transformation and AI solutions.',
+      bio: 'PhD in Computer Science with 15+ years experience in AI transformation and AI solutions.',
       image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400'
     },
     {
@@ -71,35 +71,7 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-dark-950 via-dark-900 to-dark-800 pt-20">
-        {/* Animated Background */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-neural-network opacity-30" />
-          <div className="absolute inset-0 bg-cyber-grid opacity-20" style={{ backgroundSize: '100px 100px' }} />
-          
-          {/* Floating orbs */}
-          <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-secondary-500/20 to-primary-500/20 rounded-full blur-3xl animate-float" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-cyber-blue/20 to-secondary-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <AnimatedSection>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-              About <span className="bg-gradient-to-r from-cyber-blue via-secondary-400 to-cyber-purple bg-clip-text text-transparent animate-gradient-x">iDigitalMind</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
-              Since 2012, we've been at the forefront of digital transformation, helping Australian 
-              businesses navigate the complexities of the digital age with innovative solutions and 
-              strategic expertise.
-            </p>
-            <div className="flex justify-center">
-              <Globe className="h-16 w-16 text-cyber-blue" />
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+    <div className="min-h-screen pt-20">
 
       {/* Mission Statement */}
       <section className="py-20 bg-gradient-to-b from-dark-900 to-dark-800 relative overflow-hidden">

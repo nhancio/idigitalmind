@@ -141,30 +141,76 @@ const Approach = () => {
     }
   ];
 
-  return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-dark-950 via-dark-900 to-dark-800 pt-20">
-        {/* Animated Background */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-neural-network opacity-30" />
-          <div className="absolute inset-0 bg-cyber-grid opacity-20" style={{ backgroundSize: '100px 100px' }} />
-          
-          {/* Floating orbs */}
-          <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-secondary-500/20 to-primary-500/20 rounded-full blur-3xl animate-float" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-cyber-blue/20 to-secondary-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
-        </div>
+  const aiGrowthPathway = [
+    {
+      step: '01',
+      title: 'AI Discovery',
+      description: 'Understanding your business needs and identifying AI opportunities.',
+      icon: '🔍',
+      color: 'from-cyber-blue to-secondary-400'
+    },
+    {
+      step: '02',
+      title: 'AI Education',
+      description: 'Training your team and building AI literacy across the organization.',
+      icon: '📚',
+      color: 'from-secondary-500 to-primary-500'
+    },
+    {
+      step: '03',
+      title: 'AI Implementation',
+      description: 'Deploying AI solutions and integrating them into your workflows.',
+      icon: '⚡',
+      color: 'from-cyber-purple to-cyber-pink'
+    },
+    {
+      step: '04',
+      title: 'AI Maintenance',
+      description: 'Ongoing optimization, monitoring, and continuous improvement.',
+      icon: '🔄',
+      color: 'from-cyber-blue to-secondary-500'
+    }
+  ];
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <AnimatedSection>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-              Our <span className="bg-gradient-to-r from-cyber-blue via-secondary-400 to-cyber-purple bg-clip-text text-transparent animate-gradient-x">Approach</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
-              A proven methodology that combines industry best practices with innovative thinking 
-              to deliver exceptional results for every project.
+  return (
+    <div className="min-h-screen pt-20">
+
+      {/* AI Growth Pathway */}
+      <section className="py-20 bg-gradient-to-br from-dark-800 to-dark-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-neural-network opacity-20" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              AI Growth Pathway
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              A comprehensive journey from AI discovery to sustainable implementation
             </p>
           </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {aiGrowthPathway.map((path, index) => (
+              <AnimatedSection key={path.step} delay={index * 0.1}>
+                <Card className="h-full group hover:bg-dark-700/60 transition-all duration-300 backdrop-blur-sm border-dark-600 bg-dark-800/40 hover:shadow-neural">
+                  <CardContent className="p-8 text-center">
+                    <div className={`bg-gradient-to-br ${path.color} p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-glow`}>
+                      <span className="text-2xl">{path.icon}</span>
+                    </div>
+                    <div className="bg-gradient-to-br from-cyber-blue to-secondary-400 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mx-auto mb-4">
+                      {path.step}
+                    </div>
+                    <h3 className="font-semibold text-white mb-3 text-lg">
+                      {path.title}
+                    </h3>
+                    <p className="text-sm text-gray-300 leading-relaxed">
+                      {path.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </AnimatedSection>
+            ))}
+          </div>
         </div>
       </section>
 
