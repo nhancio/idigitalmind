@@ -45,7 +45,7 @@ const Contact = () => {
                 Let's Start a Conversation
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                We're here to help you navigate your digital transformation journey. 
+                We're here to help you navigate your AI transformation journey. 
                 Whether you have a specific project in mind or just want to explore 
                 possibilities, we'd love to hear from you.
               </p>

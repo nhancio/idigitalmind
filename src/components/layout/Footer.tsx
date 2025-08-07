@@ -63,8 +63,8 @@ const Footer = () => {
                 </span>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Transforming businesses through digital innovation and AI solutions since 2012. 
-                Your trusted partner for digital transformation.
+                Transforming businesses through AI innovation and AI solutions since 2012. 
+                Your trusted partner for AI transformation.
               </p>
               <div className="space-y-2 text-sm">
                 <div className="flex items-center space-x-2 text-gray-400 hover:text-cyber-blue transition-colors duration-300">

@@ -1,6 +1,6 @@
 # iDigitalMind Website
 
-A modern, responsive website for iDigitalMind - Australian digital transformation and AI consultancy.
+A modern, responsive website for iDigitalMind - Australian AI transformation and AI consultancy.
 
 ## 🚀 Features
 

@@ -24,10 +24,10 @@ const Home = () => {
   const [activeClientTab, setActiveClientTab] = useState('all');
   const services = [
     {
-      title: 'Digital Strategy',
-      description: 'Transform your business with comprehensive digital roadmaps tailored to your industry.',
+      title: 'AI Strategy',
+      description: 'Transform your business with comprehensive AI roadmaps tailored to your industry.',
       icon: Lightbulb,
-      features: ['Strategic Planning', 'Digital Roadmaps', 'Technology Assessment']
+      features: ['Strategic Planning', 'AI Roadmaps', 'Technology Assessment']
     },
     {
       title: 'AI & Machine Learning',
@@ -54,7 +54,7 @@ const Home = () => {
       name: 'Sarah Johnson',
       position: 'CEO',
       company: 'TechStart Australia',
-      content: 'iDigitalMind transformed our digital presence completely. Their AI solutions increased our efficiency by 40%.',
+      content: 'iDigitalMind transformed our AI-powered presence completely. Their AI solutions increased our efficiency by 40%.',
       rating: 5
     },
     {
@@ -220,19 +220,19 @@ const Home = () => {
                 className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-secondary-500/20 to-primary-500/20 border border-cyber-blue/30 backdrop-blur-sm mb-6"
               >
                 <div className="w-2 h-2 bg-cyber-blue rounded-full animate-pulse mr-2" />
-                <span className="text-cyber-blue text-sm font-medium">Now with Advanced AI & Digital Technology</span>
+                <span className="text-cyber-blue text-sm font-medium">Now with Advanced AI & AI Technology</span>
               </motion.div>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               Transform your business with{' '}
               <span className="bg-gradient-to-r from-cyber-blue via-secondary-400 to-cyber-purple bg-clip-text text-transparent animate-gradient-x">
-                digital thinking
+                AI thinking
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              We partner with organisations to unlock growth and navigate the digital era with confidence.
+              We partner with organisations to unlock growth and navigate the AI era with confidence.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -292,7 +292,7 @@ const Home = () => {
               Our Core Services
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive digital solutions to accelerate your business transformation
+              Comprehensive AI solutions to accelerate your business transformation
             </p>
           </AnimatedSection>
 
@@ -586,7 +586,7 @@ const Home = () => {
               Ready to Start Your Project?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-12">
-              Let's discuss how we can help you navigate the digital landscape 
+              Let's discuss how we can help you navigate the AI landscape 
               and achieve your business goals.
             </p>
           </AnimatedSection>

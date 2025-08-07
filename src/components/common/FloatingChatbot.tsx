@@ -41,7 +41,7 @@ const FloatingChatbot = () => {
         const botResponses = [
           "That's a great question! Let me help you with that.",
           "I'd be happy to provide more information about our services.",
-          "Our team specializes in digital transformation and AI solutions.",
+          "Our team specializes in AI transformation and AI solutions.",
           "Would you like to know more about our specific services?",
           "I can connect you with our team for a detailed consultation."
         ];

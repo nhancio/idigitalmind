@@ -28,7 +28,7 @@ const About = () => {
   ];
 
   const timeline = [
-    { year: '2012', event: 'Founded iDigitalMind with a vision to transform businesses through digital innovation' },
+    { year: '2012', event: 'Founded iDigitalMind with a vision to transform businesses through AI innovation' },
     { year: '2015', event: 'Expanded into AI and machine learning solutions, becoming early adopters in the Australian market' },
     { year: '2018', event: 'Launched our healthcare platform, revolutionizing patient management systems' },
     { year: '2020', event: 'Pivoted to support businesses during AI transformation accelerated by global changes' },
@@ -52,7 +52,7 @@ const About = () => {
     {
       name: 'Emily Watson',
       role: 'Head of Design',
-      bio: 'Award-winning UX designer with expertise in creating intuitive digital experiences.',
+      bio: 'Award-winning UX designer with expertise in creating intuitive AI-powered experiences.',
       image: 'https://images.pexels.com/photos/3756681/pexels-photo-3756681.jpeg?auto=compress&cs=tinysrgb&w=400'
     },
     {
@@ -84,13 +84,13 @@ const About = () => {
                 Our Mission
               </h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                We exist to bridge the gap between traditional business practices and the digital future. 
+                We exist to bridge the gap between traditional business practices and the AI-powered future. 
                 Our mission is to empower organizations with the tools, strategies, and expertise they 
                 need to thrive in an increasingly connected world.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
                 Through innovative technology solutions, strategic consulting, and unwavering commitment 
-                to our clients' success, we're building a more digitally empowered business landscape 
+                to our clients' success, we're building a more AI-empowered business landscape 
                 across Australia and beyond.
               </p>
             </AnimatedSection>
