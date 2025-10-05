@@ -13,15 +13,15 @@ const pastelIcons = [
 
 const carouselSlides = [
   {
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1920&q=80",
     headline: "Agentic Automations — Intelligent AI Agents Working Autonomously for Your Business",
   },
   {
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?auto=format&fit=crop&w=1920&q=80",
     headline: "Data Science & ML — Transform Raw Data into Predictive Intelligence",
   },
   {
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=1920&q=80",
     headline: "AI Transformation — Embed Intelligence into Every Corner of Your Organization",
   }
 ];
@@ -108,39 +108,46 @@ const Hero = () => {
           role="region"
           aria-label="AI Services Carousel"
         >
-          {/* Background Images with Smooth Transitions */}
-          {carouselSlides.map((slideData, idx) => (
-            <img
-              key={idx}
-              src={slideData.image}
-              alt={`AI and Data Science Solutions - ${slideData.headline}`}
-              className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out ${
-                slide === idx 
-                  ? 'opacity-100 scale-100' 
-                  : 'opacity-0 scale-105'
-              }`}
-              style={{ zIndex: 1 }}
-            />
-          ))}
-          {/* Removed gradient overlay to show original images without blur */}
-          {/* Dynamic Flowing Text */}
-          <div className="absolute inset-0 flex items-center justify-center z-20 text-center">
-            {carouselSlides.map((slideData, idx) => (
-              <div
-                key={idx}
-                className={`transition-all duration-1000 ease-in-out absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${
-                  slide === idx 
-                    ? 'opacity-100 scale-100' 
-                    : 'opacity-0 scale-105 pointer-events-none'
-                } w-full max-w-4xl px-4`}
-              >
-                <h2 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
-                  <span className="inline-block animate-fadeInUp w-full" style={{ animationDelay: '0.2s' }}>
-                    {slideData.headline}
-                  </span>
-                </h2>
-              </div>
-            ))}
+          {/* Split Layout Container */}
+          <div className="absolute inset-0 flex flex-col md:flex-row z-10">
+            {/* Left Half - Gradient Background with Text */}
+            <div className="w-full md:w-1/2 h-1/2 md:h-full relative bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100 flex items-center justify-center px-8 md:px-16">
+              {carouselSlides.map((slideData, idx) => (
+                <div
+                  key={idx}
+                  className={`transition-all duration-1000 ease-in-out absolute ${
+                    slide === idx 
+                      ? 'opacity-100 scale-100' 
+                      : 'opacity-0 scale-105 pointer-events-none'
+                  } w-full px-8`}
+                >
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4">
+                    <span 
+                      className="inline-block animate-fadeInUp w-full bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent" 
+                      style={{ animationDelay: '0.2s' }}
+                    >
+                      {slideData.headline}
+                    </span>
+                  </h2>
+                </div>
+              ))}
+            </div>
+            
+            {/* Right Half - Image */}
+            <div className="w-full md:w-1/2 h-1/2 md:h-full relative overflow-hidden">
+              {carouselSlides.map((slideData, idx) => (
+                <img
+                  key={idx}
+                  src={slideData.image}
+                  alt={`AI and Data Science Solutions - ${slideData.headline}`}
+                  className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out ${
+                    slide === idx 
+                      ? 'opacity-100 scale-100' 
+                      : 'opacity-0 scale-105'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
           {/* Dots with Smooth Transitions */}
                     <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-30" aria-label="Carousel navigation">
