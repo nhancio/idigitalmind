@@ -9,7 +9,7 @@ const internshipOpenings = [
     location: "Remote",
     duration: "2-6 months",
     hours: "15–25 hrs/week",
-    description: `Join Nhancio as a Graphic Designer and craft visually stunning assets for our AI-driven products. You’ll design social creatives, landing pages, pitch decks, and branding materials for projects like Homemates AI and Agentlybot.com. Collaborate closely with product and marketing teams to define a unified visual identity. Ideal for those who love blending creativity with emerging technologies like AI and automation. You’ll work in a fast-paced, design-forward startup environment where your ideas directly shape brand presence.`,
+      description: `Join iDigitalMind as a Graphic Designer and craft visually stunning assets for our AI-driven products. You'll design social creatives, landing pages, pitch decks, and branding materials for projects like Homemates AI and Intelliasset. Collaborate closely with product and marketing teams to define a unified visual identity. Ideal for those who love blending creativity with emerging technologies like AI and automation. You'll work in a fast-paced, design-forward startup environment where your ideas directly shape brand presence.`,
     requirements: [
       "Figma/Canva skills",
       "Creativity & visual storytelling",
@@ -25,7 +25,7 @@ const internshipOpenings = [
     location: "Remote",
     duration: "2-6 months",
     hours: "15–25 hrs/week",
-    description: `Help us build buzz around our AI tools and startups like Homemates AI and Agentlybot.com. Create viral content, manage campaigns, and track analytics across platforms like LinkedIn, Instagram, and Twitter. Get hands-on with AI tools to automate, optimise, and elevate our marketing game. Perfect for someone passionate about storytelling, trends, and growth hacking in tech. You’ll play a key role in making Nhancio a known name in the AI and startup ecosystem.`,
+      description: `Help us build buzz around our AI tools and startups like Homemates AI and Intelliasset. Create viral content, manage campaigns, and track analytics across platforms like LinkedIn, Instagram, and Twitter. Get hands-on with AI tools to automate, optimise, and elevate our marketing game. Perfect for someone passionate about storytelling, trends, and growth hacking in tech. You'll play a key role in making iDigitalMind a known name in the AI and startup ecosystem.`,
     requirements: [
       "Content creation skills",
       "Familiarity with social platforms",
@@ -41,7 +41,7 @@ const internshipOpenings = [
     location: "Remote",
     duration: "2-6 months",
     hours: "15–25 hrs/week",
-    description: `Design, develop, and maintain lightning-fast and scalable websites for our AI products. You'll work on public platforms like Agentlybot.com and campaign microsites. Experience in HTML, CSS, JavaScript (React preferred) and deployment best practices is desired. Collaborate with designers and AI engineers to bring functional, user-focused digital experiences to life. Get exposure to real-world LLM integration and next-gen web tools.`,
+      description: `Design, develop, and maintain lightning-fast and scalable websites for our AI products. You'll work on public platforms like Intelliasset and campaign microsites. Experience in HTML, CSS, JavaScript (React preferred) and deployment best practices is desired. Collaborate with designers and AI engineers to bring functional, user-focused digital experiences to life. Get exposure to real-world LLM integration and next-gen web tools.`,
     requirements: [
       "HTML, CSS, JS (React preferred)",
       "Deployment basics",
@@ -89,7 +89,7 @@ const internshipOpenings = [
     location: "Remote",
     duration: "2-6 months",
     hours: "15–25 hrs/week",
-    description: `Develop cutting-edge Android applications for AI-first tools like Agentlybot and Homemates AI. You’ll work with Kotlin/Java, REST APIs, and Firebase to build intelligent, intuitive apps. Collaborate with design and data teams to integrate personalization and LLM features. Be part of a fast-evolving tech stack and contribute to public releases. Ideal for those passionate about mobile and innovation in GenAI.`,
+      description: `Develop cutting-edge Android applications for AI-first tools like Intelliasset and Homemates AI. You'll work with Kotlin/Java, REST APIs, and Firebase to build intelligent, intuitive apps. Collaborate with design and data teams to integrate personalization and LLM features. Be part of a fast-evolving tech stack and contribute to public releases. Ideal for those passionate about mobile and innovation in GenAI.`,
     requirements: [
       "Kotlin/Java",
       "REST APIs/Firebase",
@@ -105,7 +105,7 @@ const internshipOpenings = [
     location: "Remote",
     duration: "2-6 months",
     hours: "15–25 hrs/week",
-    description: `Dive deep into real-world AI and LLM pipelines, powering apps like Homemates AI and Agentlybot. You’ll work on data modeling, prompt engineering, retrieval-augmented generation (RAG), and fine-tuning. Experience with Python, LangChain, vector databases, and OpenAI APIs is a plus. You'll experiment with agent-based frameworks to build autonomous taskbots. If you're passionate about building AI that actually works — this is your place.`,
+      description: `Dive deep into real-world AI and LLM pipelines, powering apps like Homemates AI and Intelliasset. You'll work on data modeling, prompt engineering, retrieval-augmented generation (RAG), and fine-tuning. Experience with Python, LangChain, vector databases, and OpenAI APIs is a plus. You'll experiment with agent-based frameworks to build autonomous taskbots. If you're passionate about building AI that actually works — this is your place.`,
     requirements: [
       "Python, ML basics",
       "LangChain/OpenAI APIs (bonus)",
@@ -121,7 +121,7 @@ const internshipOpenings = [
     location: "Remote",
     duration: "2-6 months",
     hours: "15–25 hrs/week",
-    description: `Ensure the reliability and excellence of AI tools and mobile/web apps across platforms. You’ll develop test plans, perform functional and UI testing, and report bugs in Agile cycles. Work on products like Homemates AI and Agentlybot with real users. Exposure to automation tools like Selenium, Postman, and mobile emulators is a bonus. Perfect for detail-oriented techies who love finding and solving issues early.`,
+      description: `Ensure the reliability and excellence of AI tools and mobile/web apps across platforms. You'll develop test plans, perform functional and UI testing, and report bugs in Agile cycles. Work on products like Homemates AI and Intelliasset with real users. Exposure to automation tools like Selenium, Postman, and mobile emulators is a bonus. Perfect for detail-oriented techies who love finding and solving issues early.`,
     requirements: [
       "Testing basics",
       "Attention to detail",
@@ -137,7 +137,7 @@ const internshipOpenings = [
     location: "Remote",
     duration: "2-6 months",
     hours: "15–25 hrs/week",
-    description: `Take charge of user research, feature planning, and roadmapping for live products like Agentlybot and Homemates AI. Work cross-functionally with design, tech, and business teams to ship features and improve UX. You’ll define KPIs, run sprints, and get hands-on experience with LLM-based product innovations. Ideal for aspiring PMs who love AI, experimentation, and customer empathy. Expect full ownership of exciting modules from day one.`,
+      description: `Take charge of user research, feature planning, and roadmapping for live products like Intelliasset and Homemates AI. Work cross-functionally with design, tech, and business teams to ship features and improve UX. You'll define KPIs, run sprints, and get hands-on experience with LLM-based product innovations. Ideal for aspiring PMs who love AI, experimentation, and customer empathy. Expect full ownership of exciting modules from day one.`,
     requirements: [
       "User research",
       "Feature planning",
@@ -152,7 +152,7 @@ const overview = [
   { label: "Location", value: "Remote (Work from anywhere)" },
   { label: "Duration", value: "Minimum 2 months; Preferred 3–6 months" },
   { label: "Working Hours", value: "Flexible (Approx. 15–25 hours/week)" },
-  { label: "Perks", value: "Work on real AI projects, Certificate & LOR, Mentorship from IIT Kanpur alumni, Spotlight on Nhancio socials, Access to internal tools & playbooks" },
+  { label: "Perks", value: "Work on real AI projects, Certificate & LOR, Mentorship from experienced professionals, Spotlight on iDigitalMind socials, Access to internal tools & playbooks" },
   { label: "Eligibility", value: "Open to college students, recent grads, or early professionals with a strong interest in startups, tech, and AI" },
   { label: "General Tools", value: "Slack, Notion, Google Drive, GitHub, Figma/Canva (role-specific)" },
   { label: "Requirements", value: "Strong communication, self-motivation, willingness to learn, role-specific skills, portfolio/GitHub (preferred)" },
@@ -166,10 +166,10 @@ const Careers = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
-            🌟 Nhancio Internship Program
+            🌟 iDigitalMind Internship Program
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Work on real AI products, learn from IIT Kanpur alumni, and launch your career in tech/startups. Flexible, remote, and high-impact internships for students and early professionals.
+            Work on real AI products, learn from experienced professionals, and launch your career in tech/startups. Flexible, remote, and high-impact internships for students and early professionals.
           </p>
         </div>
 
@@ -259,7 +259,7 @@ const Careers = () => {
               We're always looking for talented interns to join our team. Send us your resume and let's talk!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="mailto:hello@nhancio.com" className="bg-purple-600 text-white px-8 py-3 rounded-2xl font-semibold hover:bg-purple-700 transition-colors flex items-center justify-center">
+              <a href="mailto:contact@idigitalmind.com.au" className="bg-purple-600 text-white px-8 py-3 rounded-2xl font-semibold hover:bg-purple-700 transition-colors flex items-center justify-center">
                 Contact HR
               </a>
             </div>

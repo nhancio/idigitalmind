@@ -8,7 +8,7 @@ const PrivacyPolicy = () => (
       
       <div className="prose prose-lg max-w-none">
         <p className="text-gray-700 mb-6">
-          At Nhancio, we value your trust and are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website, use our services, or interact with us.
+          At iDigitalMind, we value your trust and are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website, use our services, or interact with us.
         </p>
 
         <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">1. Information We Collect</h2>
@@ -62,8 +62,8 @@ const PrivacyPolicy = () => (
         <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">8. Contact Us</h2>
         <p className="text-gray-700 mb-4">If you have any questions about this Privacy Policy or how your data is handled, please contact us at:</p>
         <div className="bg-gray-50 rounded-2xl p-6 mb-6">
-          <p className="text-gray-700 mb-2">📧 <a href="mailto:nithindidigam@nhancio.com" className="text-purple-600 hover:text-purple-700">nithindidigam@nhancio.com</a></p>
-          <p className="text-gray-700">🌐 <a href="https://www.nhancio.com" className="text-purple-600 hover:text-purple-700">www.nhancio.com</a></p>
+          <p className="text-gray-700 mb-2">📧 <a href="mailto:contact@idigitalmind.com.au" className="text-purple-600 hover:text-purple-700">contact@idigitalmind.com.au</a></p>
+          <p className="text-gray-700">🌐 <a href="https://www.idigitalmind.com.au" className="text-purple-600 hover:text-purple-700">www.idigitalmind.com.au</a></p>
         </div>
       </div>
     </div>

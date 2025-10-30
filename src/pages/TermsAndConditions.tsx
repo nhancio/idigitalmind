@@ -8,7 +8,7 @@ const TermsAndConditions = () => (
       
       <div className="prose prose-lg max-w-none">
         <p className="text-gray-700 mb-6">
-          Welcome to Nhancio. By accessing or using our website and services, you agree to the following Terms and Conditions. Please read them carefully.
+          Welcome to iDigitalMind. By accessing or using our website and services, you agree to the following Terms and Conditions. Please read them carefully.
         </p>
 
         <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">1. Acceptance of Terms</h2>
@@ -18,7 +18,7 @@ const TermsAndConditions = () => (
 
         <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">2. Services</h2>
         <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
-          <li>Nhancio provides consultancy and solutions in AI, automation, data science, software development, marketing, and product design.</li>
+          <li>iDigitalMind provides consultancy and solutions in AI, automation, data science, software development, marketing, and product design.</li>
           <li>Services are customized to each client's needs.</li>
           <li>All proposals, timelines, and deliverables will be agreed upon in writing before work begins.</li>
         </ul>
@@ -40,19 +40,19 @@ const TermsAndConditions = () => (
 
         <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">5. Intellectual Property</h2>
         <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
-          <li>Any pre-existing intellectual property of Nhancio (such as tools, frameworks, or code libraries) remains our property.</li>
+          <li>Any pre-existing intellectual property of iDigitalMind (such as tools, frameworks, or code libraries) remains our property.</li>
           <li>Final deliverables created specifically for a client will be transferred to them upon full payment, unless otherwise agreed.</li>
-          <li>Clients must not resell or reuse Nhancio's proprietary assets without written permission.</li>
+          <li>Clients must not resell or reuse iDigitalMind's proprietary assets without written permission.</li>
         </ul>
 
         <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">6. Confidentiality</h2>
         <p className="text-gray-700 mb-6">
-          Both Nhancio and the client agree to protect confidential information shared during the course of the project. Neither party may disclose such information to third parties without prior written consent.
+          Both iDigitalMind and the client agree to protect confidential information shared during the course of the project. Neither party may disclose such information to third parties without prior written consent.
         </p>
 
         <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">7. Limitation of Liability</h2>
         <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
-          <li>Nhancio will make every effort to deliver high-quality services, but we cannot guarantee that results will meet all business expectations or eliminate all risks.</li>
+          <li>iDigitalMind will make every effort to deliver high-quality services, but we cannot guarantee that results will meet all business expectations or eliminate all risks.</li>
           <li>We are not liable for indirect, incidental, or consequential damages arising from the use of our services.</li>
         </ul>
 
@@ -68,14 +68,14 @@ const TermsAndConditions = () => (
 
         <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">10. Changes to Terms</h2>
         <p className="text-gray-700 mb-6">
-          Nhancio reserves the right to update or modify these Terms & Conditions at any time. Changes will be effective immediately upon posting on this website.
+          iDigitalMind reserves the right to update or modify these Terms & Conditions at any time. Changes will be effective immediately upon posting on this website.
         </p>
 
         <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">11. Contact Us</h2>
         <p className="text-gray-700 mb-4">If you have any questions about these Terms & Conditions, please contact us:</p>
         <div className="bg-gray-50 rounded-2xl p-6 mb-6">
-          <p className="text-gray-700 mb-2">📧 <a href="mailto:nithindidigam@nhancio.com" className="text-purple-600 hover:text-purple-700">nithindidigam@nhancio.com</a></p>
-          <p className="text-gray-700">🌐 <a href="https://www.nhancio.com" className="text-purple-600 hover:text-purple-700">www.nhancio.com</a></p>
+          <p className="text-gray-700 mb-2">📧 <a href="mailto:contact@idigitalmind.com.au" className="text-purple-600 hover:text-purple-700">contact@idigitalmind.com.au</a></p>
+          <p className="text-gray-700">🌐 <a href="https://www.idigitalmind.com.au" className="text-purple-600 hover:text-purple-700">www.idigitalmind.com.au</a></p>
         </div>
       </div>
     </div>

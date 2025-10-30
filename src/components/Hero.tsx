@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Cloud, BarChart, Settings, Wifi, Instagram, Linkedin, Github } from 'lucide-react';
+import { Cloud, BarChart, Settings, Wifi, Instagram, Linkedin, Github } from 'lucide-react';
 
 const pastelIcons = [
   { icon: <Cloud size={80} />, style: { top: '18%', right: '8%', color: '#CFFFE5' } },
@@ -28,7 +28,6 @@ const carouselSlides = [
 
 const Hero = () => {
   const [slide, setSlide] = React.useState(0);
-  const [isTransitioning, setIsTransitioning] = React.useState(false);
   const touchStartX = React.useRef<number | null>(null);
   const touchEndX = React.useRef<number | null>(null);
   const autoSlideTimeout = React.useRef<number | null>(null);
